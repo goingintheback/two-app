@@ -5,41 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TwoActivity">
 
-    <TextView
-        android:id="@+id/helloText"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Здравствуй, Мир!"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="40sp"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84" />
+        app:srcCompat="@drawable/androidd" />
 
-    <ImageButton
-        android:id="@+id/startButton"
-        style="@android:style/Widget.DeviceDefault.ImageButton"
-        android:layout_width="420dp"
-        android:layout_height="448dp"
-        android:onClick="onStartButtonClick"
-        app:srcCompat="@drawable/i"
-        tools:layout_editor_absoluteX="-5dp"
-        tools:layout_editor_absoluteY="101dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Открыть вторую страницу"
-        android:onClick="onClick"
+        android:text="Вернуться назад"
+        android:onClick="onClickBack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

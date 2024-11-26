@@ -3,8 +3,6 @@ package com.example.button;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,18 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-
-    private TextView helloText;
-    private ImageButton startButton;
+public class TwoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        helloText = (TextView) findViewById(R.id.helloText);
-        startButton = (ImageButton) findViewById(R.id.startButton);
+        setContentView(R.layout.activity_two);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -31,14 +24,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void onStartButtonClick(View view) {
-        startButton.setImageResource(R.drawable.androidd);
-        helloText.setVisibility(View.VISIBLE);
-        startButton.setClickable(false);
-    }
 
-    public void onClick(View view) {
-        Intent intent = new Intent(this, TwoActivity.class);
+    public void onClickBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
