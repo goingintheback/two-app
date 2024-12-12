@@ -36,10 +36,4 @@ public class MainActivity extends AppCompatActivity {
         helloText.setVisibility(View.VISIBLE);
         startButton.setClickable(false);
     }
-
-    public void onClick(View view) {
-        Intent intent = new Intent(this, TwoActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }
